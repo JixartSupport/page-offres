@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/scripts.js"></script>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body class="font-lato bg-white">
+    <!-- Top header -->
+    <header class="bg-primary">
+      <div class="mx-auto flex justify-center items-center px-30 py-[11px]">
+        <a href="#"><img src="./assets/logo.svg" alt="" /></a>
+      </div>
+    </header>
+
+    <main
+      id="sticky-section"
+      class="sticky-section pb-[138px] md:pb-[108px] lg:pb-[140px]"
+    >
+      <!--Top content section-->
+      <div id="bloc-offers">
+        <!-- Hero section -->
+        <section class="w-full bloc-animate">
+          <div
+            class="flex flex-col-reverse lg:flex-row lg:flex-nowrap w-full relative"
+          >
+            <!-- left: Content block -->
+            <form
+              action=""
+              method=""
+              class="items-offers lg:w-1/2 px-4.5 md:px-50 xl:px-100 h-full pt-7 w-full md:flex md:flex-row lg:flex-col sm:justify-around md:gap-0 lg:gap-50 items-stretch"
+            >
+              <h1
+                class="hidden lg:block font-extrabold text-4xl mb-30 mt-[34.5px]"
+              >
+                Nos offres d’abonnements
+              </h1>
+              <div
+                class="item-offer flex flex-col w-full md:border-r-1 rounded-r-none md:border-[#0000001A] lg:border-0 md:flex-row gap-4 h-auto @md:px-4.5 mb-7 md:mb-0 @md:py-7 md:pr-50 lg:pr-0"
+              >
+                <div
+                  class="w-full p-5 lg:p-[40px] lg:pb-[20px] rounded-[20px] border border-[0.5px] border-[#B9B9B9] bg-white bloc-shadow"
+                >
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="title-offre">Votre offre Premium</h2>
+                    <span class="sub-compte-nb text-xs lg:text-base"
+                      >2 comptes</span
+                    >
+                  </div>
+
+                  <!-- Annuelle -->
+                  <div class="subscription-offer cursor-pointer block">
+                    <input
+                      type="radio"
+                      name="subscription"
+                      value="annuelle"
+                      class="mt-1 checked:accent-primary w-[12px] h-[12px] mr-[5px] float-left subscription-radio"
+                      checked
+                    />
+
+                    <div class="flex gap-1.5 flex-col">
+                      <span class="inline-flex items-center space-x-2">
+                        <span class="font-bold text-sm font-inter"
+                          >Annuelle</span
+                        >
+                      </span>
+                      <span
+                        class="absolute top-0 right-0 bg-primary text-white text-10 rounded-tr-[10px] font-normal px-2 py-1 rounded-bl-xs font-lato"
+                        >Économisez 100€</span
+                      >
+
+                      <div class="text-xs font-inter font-semibold leading-0">
+                        139,99€
+                        <span class="text-10 font-normal ml-[10px] line-through"
+                          >239,99€</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mensuelle -->
+                  <div class="subscription-offer cursor-pointer block relative">
+                    <input
+                      type="radio"
+                      name="subscription"
+                      value="mensuelle"
+                      class="checked:accent-primary mt-1 radio radio-primary w-[12px] h-[12px] mr-[5px] float-left subscription-radio"
+                    />
+                    <div class="flex gap-1.5 flex-col">
+                      <span class="inline-flex items-center space-x-2">
+                        <span class="font-bold text-sm font-inter"
+                          >Mensuelle</span
+                        >
+                      </span>
+                      <span
+                        class="bg-grey absolute top-0 rounded-tr-[10px] right-0 text-white text-10 font-normal px-2 py-1 rounded-bl-xs font-lato"
+                        >1ère semaine offerte</span
+                      >
+
+                      <div class="text-xs font-inter font-semibold leading-0">
+                        11,99€/mois
+                        <span class="text-10 font-normal ml-[10px] line-through"
+                          >19,99€</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    class="button block primary-button lg:max-w-[269px] lg:m-auto text-center"
+                    href="/test"
+                    >Rejoindre les abonnés</a
+                  >
+
+                  <!-- Google button -->
+                  <a
+                    class="button text-sm w-full bg-white hover:shadow-none py-3 lg:max-w-[269px] lg:ml-auto mr-auto rounded-full mb-2 flex items-center justify-center gap-2 shadow-[0px_6px_10px_0px_rgba(0,0,0,0.10)] flex items-center justify-center gap-2"
+                    href="/testgoogle"
+                  >
+                    <span class="font-normal">S’abonner avec</span>
+                    <img
+                      src="./assets/Google_2015_logo.svg.webp"
+                      class="h-5"
+                      alt="Google logo"
+                    />
+                  </a>
+
+                  <p class="text-center text-black-1 mb-4 text-10 italic">
+                    Offres annulables en ligne à tout moment
+                  </p>
+
+                  <hr class="mb-4 text-gray-hr" />
+
+                  <!-- Advantages -->
+                  <div class="accordion text-black-1">
+                    <div class="accordion-item is-open">
+                      <div
+                        class="accordion-header md:pointer-events-none lg:pointer-events-auto"
+                      >
+                        <h3 class="text-base font-bold mb-4">Les avantages</h3>
+                        <span class="icon md:hidden lg:block"></span>
+                      </div>
+
+                      <div class="accordion-content is-open">
+                        <ul class="list-inside space-y-3 text-sm list-disc">
+                          <li class="flex items-start gap-5">
+                            <span
+                              class="bg-primary shrink-0 w-[7px] h-[7px] rounded self-center"
+                            ></span>
+                            <span
+                              >Accès à
+                              <span class="font-bold"
+                                >tous les articles, vidéos, podcasts et
+                                newsletters</span
+                              ></span
+                            >
+                          </li>
+                          <li class="flex items-start gap-5">
+                            <span
+                              class="bg-primary shrink-0 w-[7px] h-[7px] rounded self-center"
+                            ></span>
+                            <span
+                              >Le journal en version numérique,
+                              <span class="font-bold"
+                                >13 éditions disponibles</span
+                              ></span
+                            >
+                          </li>
+                          <li class="flex items-start gap-5">
+                            <span
+                              class="bg-primary shrink-0 w-[7px] h-[7px] rounded self-center"
+                            ></span>
+                            <span
+                              >Toutes les
+                              <span class="font-bold">grilles de jeux</span>
+                              incluses</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="item-offer flex flex-col w-full sm:flex-row gap-4 h-auto @md:px-4.5 py-0 @md:pb-7 @md:pt-7 md:pl-50 lg:pl-0"
+              >
+                <div
+                  class="w-full p-5 lg:p-[40px] lg:pb-[20px] rounded-[20px] border border-[0.5px] border-[#B9B9B9] bg-white bloc-shadow"
+                >
+                  <div class="flex justify-between items-center mb-4">
+                    <h2 class="title-offre">Votre offre Numérique</h2>
+                    <span class="sub-compte-nb text-xs lg:text-base"
+                      >1 compte</span
+                    >
+                  </div>
+
+                  <!-- Annuelle -->
+                  <div class="subscription-offer cursor-pointer block">
+                    <input
+                      type="radio"
+                      name="subscription"
+                      value="annuelle"
+                      class="float-left checked:accent-primary w-[12px] h-[12px] mr-[5px] subscription-radio"
+                    />
+
+                    <div class="flex gap-1.5 flex-col">
+                      <span class="font-bold text-sm font-inter">Annuelle</span>
+                      <span
+                        class="absolute top-0 right-0 bg-primary text-white text-10 rounded-tr-[10px] font-normal px-2 py-1 rounded-bl-xs font-lato"
+                        >Économisez 40€</span
+                      >
+
+                      <div class="text-xs font-inter font-semibold leading-0">
+                        79,99€<span
+                          class="text-10 font-normal ml-[10px] line-through"
+                          >119,99€</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mensuelle -->
+                  <div class="subscription-offer cursor-pointer block">
+                    <input
+                      type="radio"
+                      name="subscription"
+                      value="mensuelle"
+                      class="float-left checked:accent-primary w-[12px] h-[12px] mr-[5px] subscription-radio"
+                    />
+
+                    <div class="flex gap-1.5 flex-col">
+                      <span class="font-bold text-sm font-inter"
+                        >Mensuelle</span
+                      >
+                      <span
+                        class="absolute top-0 right-0 bg-grey text-white text-10 rounded-tr-[10px] font-normal px-2 py-1 rounded-bl-xs font-lato"
+                        >1ère semaine offerte</span
+                      >
+
+                      <div class="text-xs font-inter font-semibold leading-0">
+                        6,99€/mois<span
+                          class="text-10 font-normal ml-[10px] line-through"
+                          >9,99€</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    class="button block primary-button lg:max-w-[269px] lg:m-auto text-center"
+                    href="/test2"
+                    >Rejoindre les abonnés</a
+                  >
+
+                  <!-- Google button -->
+                  <a
+                    class="button text-sm w-full bg-white hover:shadow-none py-3 lg:max-w-[269px] lg:ml-auto mr-auto rounded-full mb-2 flex items-center justify-center gap-2 shadow-[0px_6px_10px_0px_rgba(0,0,0,0.10)] flex items-center justify-center gap-2"
+                    href="/testgoogle"
+                  >
+                    <span class="font-normal">S’abonner avec</span>
+                    <img
+                      src="./assets/Google_2015_logo.svg.webp"
+                      class="h-5"
+                      alt="Google logo"
+                    />
+                  </a>
+
+                  <p class="text-center text-black-1 mb-4 text-10 italic">
+                    Offres annulables en ligne à tout moment
+                  </p>
+
+                  <hr class="mb-4 text-gray-hr" />
+
+                  <!-- Les avantages -->
+                  <div class="accordion">
+                    <div id="accc_offre_integrale" class="accordion-item">
+                      <div
+                        class="accordion-header md:pointer-events-none lg:pointer-events-auto"
+                      >
+                        <h3 class="text-base font-bold mb-4">Les avantages</h3>
+                        <span class="icon md:hidden lg:block"></span>
+                      </div>
+
+                      <div class="accordion-content">
+                        <ul class="list-inside space-y-3 text-sm list-disc">
+                          <li class="flex items-start gap-5">
+                            <span
+                              class="bg-primary shrink-0 w-[7px] h-[7px] rounded self-center"
+                            ></span>
+                            <span
+                              >Accès à
+                              <span class="font-bold"
+                                >tous les articles, vidéos, podcasts et
+                                newsletters</span
+                              ></span
+                            >
+                          </li>
+                          <li class="flex items-start gap-5">
+                            <span
+                              class="bg-primary shrink-0 w-[7px] h-[7px] rounded self-center"
+                            ></span>
+                            <span
+                              ><span class="font-bold">Grilles de jeux</span>
+                              incluses</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- right: Swiper Slider -->
+            <div
+              id="bloc-sticky"
+              class="w-full lg:w-1/2 lg:sticky lg:top-[60px]"
+            >
+              <div
+                id="swiper-bloc"
+                class="swiper mySwiper h-[312px] md:h-[226px] lg:h-full"
+              >
+                <div class="swiper-wrapper relative">
+                  <!-- Slide 1 -->
+                  <div
+                    class="swiper-slide slider-item bg-[linear-gradient(0deg,rgba(0,0,0,0)_43.65%,rgba(0,0,0,0.8)_108.01%),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%),url('./assets/images/slider1.jpg')]"
+                  >
+                    <div class="heading-slider">
+                      <h2 class="text-hero">
+                        L'information vraiment locale. Vivez avec votre
+                        territoire. Chaque jour. Chaque minute.
+                      </h2>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div
+                    class="swiper-slide slider-item bg-[linear-gradient(0deg,rgba(0,0,0,0)_43.65%,rgba(0,0,0,0.8)_108.01%),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%),url('./assets/images/slider2.jpg')]"
+                  >
+                    <div class="heading-slider">
+                      <h2 class="text-hero">
+                        Le monde appartient à ceux qui s’informent tôt : le
+                        journal numérique dès 4h30, avant même le premier café.
+                      </h2>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div
+                    class="swiper-slide slider-item bg-[linear-gradient(0deg,rgba(0,0,0,0)_43.65%,rgba(0,0,0,0.8)_108.01%),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%),url('./assets/images/slider3.jpg')]"
+                  >
+                    <div class="heading-slider">
+                      <h2 class="text-hero">
+                        Les nouvelles du jour, dans votre boite mail : découvrez
+                        nos newsletters exclusives.
+                      </h2>
+                    </div>
+                  </div>
+
+                  <!-- Slide 4 -->
+                  <div
+                    class="swiper-slide slider-item bg-[linear-gradient(0deg,rgba(0,0,0,0)_43.65%,rgba(0,0,0,0.8)_108.01%),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%),url('./assets/images/slider4.jpg')]"
+                  >
+                    <div class="heading-slider">
+                      <h2 class="text-hero">
+                        Faites entendre votre voix : réagissez, commentez,
+                        débattez en direct.
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination px-30"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Offers section -->
+        <section class="@container w-full px-4.5 md:px-50 xl:px-100">
+          <hr
+            class="text-gray-hr mx-auto w-full md:my-12 lg:my-[80px] hidden md:block"
+          />
+
+          <h1 class="hidden lg:block text-center font-extrabold text-4xl mb-12">
+            Nos autres offres
+          </h1>
+          <div class="row-offer bloc-animate">
+            <!-- Offre 1 -->
+            <hr class="text-gray-hr text-black/10 md:absolute mt-7 mb-7" />
+
+            <div
+              class="bloc-border-right offer-bloc flex-grow md:pr-50 xl:pr-100 md:w-1/2"
+            >
+              <h2 class="h2-offer">
+                <span class="font-bold">La Dépêche du Midi</span> et <br />
+                <span class="font-bold">Midi Olympique</span> s’associent pour
+                <br />
+                une offre Mêlée !
+              </h2>
+
+              <div
+                class="w-full h-[113px] min-h-[113px] bloc-shadow lg:h-[238px] rounded-tl-[20px] rounded-tr-[20px] border-b-0 border-[0.5px] border-bgborder relative md:h-auto md:min-h-[113px] bg-center bg-cover bg-[linear-gradient(to_bottom,rgba(0,0,0,0.0),rgba(0,0,0,0.8)),url('./assets/images/offre1.jpg')] bg-no-repeat rounded-tl-[20px] rounded-tr-[20px]"
+              >
+                <img
+                  class="absolute bottom-[10px] left-1/2 -translate-x-1/2"
+                  src="./assets/image-bg-offre.png"
+                  alt=""
+                />
+              </div>
+
+              <!-- Offer content -->
+              <div
+                class="p-6 md:pt-3 py-[12px] px-5 lg:px-50 lg:py-5 space-y-4 bloc-shadow rounded-bl-[20px] rounded-br-[20px] border-[0.5px] border-t-0 border-bgborder"
+              >
+                <div class="flex items-start justify-between md:mb-0">
+                  <div>
+                    <h3
+                      class="text-black font-inter text-xs font-semibold mb-2 lg:text-base"
+                    >
+                      Votre offre Mêlée
+                    </h3>
+                    <p
+                      class="text-primary text-10 lg:text-xs font-lato max-w-[126px] lg:max-w-[152px]"
+                    >
+                      Toute l’info locale et le rugby réunis en un abonnement
+                    </p>
+                  </div>
+                  <div class="text-right font-lato text-black">
+                    <span class="sub-compte-nb text-xs lg:text-base"
+                      >2 comptes</span
+                    >
+                    <p
+                      class="font-semibold text-xs mb-[7px] mt-1.5 lg:text-base"
+                    >
+                      13,99€/mois
+                    </p>
+                    <p class="text-10 line-through lg:text-xs">27,98€</p>
+                  </div>
+                </div>
+
+                <!-- Bouton -->
+                <a
+                  class="button block text-center secondary-button button-medium"
+                  href="#"
+                  >Profiter de l'offre</a
+                >
+              </div>
+            </div>
+
+            <hr class="text-gray-hr md:absolute mt-7 mb-7" />
+
+            <!-- Offre 2-->
+            <div
+              class="offer-bloc flex-grow md:pl-50 xl:pl-100 md:w-1/2 md:flex flex-col justify-between"
+            >
+              <h2 class="h2-offer">
+                <span class="font-bold"
+                  >Vous souhaitez recevoir <br />
+                  votre journal à domicile ?</span
+                >
+              </h2>
+
+              <div>
+                <div
+                  class="w-full h-[113px] lg:h-[238px] bloc-shadow rounded-tl-[20px] rounded-tr-[20px] border-b-0 border-[0.5px] border-bgborder relative md:h-auto md:min-h-[113px] bg-center bg-cover bg-[linear-gradient(to_bottom,rgba(0,0,0,0.0),rgba(0,0,0,0.8)),url('./assets/images/Offre2.jpg')] bg-no-repeat rounded-tl-[20px] rounded-tr-[20px]"
+                ></div>
+
+                <!-- Offer content -->
+                <div
+                  class="p-6 md:pt-3 py-[12px] px-5 lg:px-50 lg:py-5 space-y-4 bloc-shadow rounded-bl-[20px] rounded-br-[20px] border-[0.5px] border-t-0 border-bgborder"
+                >
+                  <div class="flex items-start justify-between md:mb-0">
+                    <div>
+                      <h3
+                        class="text-black font-inter text-xs font-semibold mb-2 lg:text-base"
+                      >
+                        Votre offre Intégrale
+                      </h3>
+                      <p
+                        class="text-primary text-10 lg:text-xs font-lato max-w-[126px] lg:max-w-[152px]"
+                      >
+                        Découvrez l'offre papier + numérique
+                      </p>
+                    </div>
+                    <div class="text-right font-lato text-black">
+                      <span class="sub-compte-nb text-xs lg:text-base"
+                        >2 comptes</span
+                      >
+                      <p
+                        class="font-semibold text-xs mb-[7px] mt-1.5 lg:text-base"
+                      >
+                        24,99€/mois
+                      </p>
+                      <p class="text-10 line-through lg:text-xs">28,99€</p>
+                    </div>
+                  </div>
+
+                  <!-- Bouton -->
+                  <a
+                    class="button block text-center secondary-button button-medium"
+                    href="#"
+                    >Profiter de l'offre</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <hr class="text-gray-hr md:absolute mt-7 mb-7" />
+          </div>
+
+          <hr class="hr" />
+
+          <div class="row-offer bloc-animate">
+            <!-- Offre 3-->
+            <div
+              class="flex flex-col justify-between offer-bloc md:w-1/2 flex-grow-0 mx-auto md:min-w-[500px] md:max-w-[520px]"
+            >
+              <h2 class="font-lato text-center text-lg mb-[15px]">
+                <span class="font-bold"
+                  >La Depêche est aussi un journal qui se partage</span
+                >
+              </h2>
+
+              <div
+                class="rounded-[20px] h-[83px] lg:h-[113px] relative md:h-auto md:min-h-[83px] bg-center bg-cover bg-[linear-gradient(179deg,rgba(0,0,0,0)_-26.37%,#000_99.14%),url('./assets/images/offre3.png')] bg-no-repeat bg-[length:126.537%_391.706%] bg-[position:-41px_-121.058px] bg-primary rounded-tl-[20px] rounded-tr-[20px]"
+              >
+                <!-- Offer content -->
+                <div
+                  class="absolute flex items-start justify-between bottom-[15px] text-white w-full px-5"
+                >
+                  <h3 class="font-inter text-xs lg:text-base font-semibold">
+                    Offrir l’abonnement
+                  </h3>
+                  <p class="font-semibold text-xs lg:text-base">
+                    à partir de 30€
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <hr class="text-gray-hr md:absolute mt-7 mb-7" />
+          </div>
+        </section>
+      </div>
+
+      <!-- Divider section: added to optimise the appear of the sticky block in the right moment -->
+      <section class="@container w-full px-4.5 md:px-50 xl:px-100">
+        <hr class="hr border-t-0" />
+      </section>
+
+      <!-- Slider Blogs section -->
+      <section
+        class="@container blogs-section w-full mb-7 md:mb-12 lg:mb-20 bloc-animate"
+      >
+        <div
+          class="flex flex-col gap-[29px] md:flex-row h-full @sm:px-4.5 pb-7 md:pb-4 lg:pb-5"
+        >
+          <h3 class="font-extrabold text-xl lg:text-4xl md:mx-auto">
+            Découvrez le Club et profitez de nombreux avantages
+          </h3>
+        </div>
+        <div
+          class="w-full bg-black pt-3.5 md:pt-30 lg:pt-[40px] pb-5 pl-[8px] md:pl-50 lg:pl-0 @sm:pb-7"
+        >
+          <img
+            class="pl-2.5 md:pl-0 pb-4 md:pb-5 lg:pl-100"
+            src="./assets/La-De%CC%81pe%CC%82che-du-Midi.png"
+            alt=""
+          />
+<!-- Swiper Container -->
+<div class="swiper mySwiperBlogs h-full overflow-visible">
+  <div class="swiper-wrapper h-full">
+    <!-- Slides will be injected dynamically by JavaScript -->
+  </div>
+
+
+</div>
+
+        </div>
+      </section>
+
+      <!-- S'abonner à la depêche section -->
+      <section class="@container w-full bloc-animate">
+        <div
+          class="flex flex-col gap-[29px] md:flex-row h-full px-4.5 @sm:pb-7 md:px-50 lg:px-0 max-w-[834px] m-auto justify-between"
+        >
+          <div
+            class="flex flex-col gap-30 md:w-1/2 md:max-w-[302px] lg:max-w-[384px]"
+          >
+            <h2
+              class="font-extrabold text-2xl text-center md:text-left max-w-[215px] md:max-w-[233px] mx-auto md:mx-0"
+            >
+              Pourquoi s’abonner à La Dépêche?
+            </h2>
+            <p
+              class="text-xl font-bold text-center md:text-left text-black-1 max-w-[308px] md:max-w-[302px] md:max-w-max mx-auto md:mx-0"
+            >
+              Bien s’informer, c’est se sentir chez soi.
+            </p>
+            <p class="text-black-1 md:max-w-[384px]">
+              Depuis plus de 150 ans, La Dépêche raconte le monde en restant
+              fidèle à son ADN : proche de vous, pour de vrai. Avec 170
+              journalistes sur le terrain, chaque jour, nous écrivons
+              l’actualité avec exigence et indépendance. Une info réactive,
+              locale et nationale, qui vous parle vraiment.
+              <br /><br />
+              Parce que bien s’informer, c’est aussi bien vivre.
+            </p>
+          </div>
+
+          <div class="profiles flex flex-col gap-15 md:w-1/2 flex-1">
+            <div class="item flex flex-row w-full items-stretch">
+              <img
+                class="item-agent"
+                src="./assets/Lionel-laparade.jpg"
+                alt=""
+              />
+              <div
+                class="infos bg-gray-bg py-2 px-3 flex flex-col rounded-tr-lg rounded-br-lg flex-1"
+              >
+                <p class="uppercase md:text-xl">Lionel LAPARADE</p>
+                <p class="text-primary text-10 mt-0.5 md:text-sm">
+                  Journaliste et directeur de l’information
+                </p>
+                <p class="text-sm italic font-bold mt-2.5 md:text-base">
+                  “Nous décryptons pour nos lecteurs l’information locale, mais
+                  aussi ce qui se passe à l’autre bout du monde.”
+                </p>
+              </div>
+            </div>
+
+            <div class="item flex flex-row w-full">
+              <img
+                class="item-agent"
+                src="./assets/Beatrice-colin.jpg"
+                alt=""
+              />
+              <div
+                class="infos bg-gray-bg py-2 px-3 flex flex-col rounded-tr-lg rounded-br-lg flex-1"
+              >
+                <p class="uppercase md:text-xl">Béatrice COLIN</p>
+                <p class="text-primary text-10 mt-0.5 md:text-sm">
+                  Journaliste et responsable adjointe des éditions Haute-Garonne
+                </p>
+                <p class="text-sm italic font-bold mt-2.5 md:text-base">
+                  “Journaliste, plus qu’un métier, une passion au service de nos
+                  lecteurs.”
+                </p>
+              </div>
+            </div>
+
+            <div class="item flex flex-row w-full">
+              <img class="item-agent" src="./assets/Theo-faugere.jpg" alt="" />
+              <div
+                class="infos bg-gray-bg py-2 px-3 flex flex-col rounded-tr-lg rounded-br-lg flex-1"
+              >
+                <p class="uppercase md:text-xl">Théo FAUGERE</p>
+                <p class="text-primary text-10 mt-0.5 md:text-sm">
+                  Journaliste service des sports
+                </p>
+                <p class="text-sm italic font-bold mt-2.5 md:text-base">
+                  “Le sport nous fait vibrer: être au coeur de l’action, vous
+                  faire ovore des émotions. Avec La Dépêche, c’est comme si vous
+                  y étiez.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section-->
+      <section
+        class="@container bloc-animate w-full md:mt-20 px-4.5 @sm:pb-7 md:px-50 lg:px-100 xl:px-[180px] 2xl:px-[303px]"
+      >
+        <h2 class="uppercase text-center font-semibold text-xl md:text-2xl">
+          Foire aux questions
+        </h2>
+        <p
+          class="text-center max-w-[184px] md:max-w-[346px] max-w m-auto md:text-xl"
+        >
+          Des questions ? Nous avons la réponse.
+        </p>
+        <div class="accordion my-5">
+          <div class="accordion-item bloc-shadow faq-accordion mb-1">
+            <div class="accordion-header">
+              <h3 class="text-base font-bold">
+                Comment ça marche si je veux partager mon abonnement avec
+                quelqu’un ?
+              </h3>
+              <img class="icon" src="./assets/arrow-down.svg" alt="" />
+            </div>
+
+            <div class="accordion-content">test content</div>
+          </div>
+
+          <div class="accordion-item bloc-shadow faq-accordion mb-1">
+            <div class="accordion-header">
+              <h3 class="text-base font-bold">
+                Quels sont les moyens de paiement acceptés ?
+              </h3>
+              <img class="icon" src="./assets/arrow-down.svg" alt="" />
+            </div>
+
+            <div class="accordion-content">test content</div>
+          </div>
+
+          <div class="accordion-item bloc-shadow faq-accordion">
+            <div class="accordion-header">
+              <h3 class="text-base font-bold">
+                Comment faire si je veux me désabonner ?
+              </h3>
+              <img class="icon" src="./assets/arrow-down.svg" alt="" />
+            </div>
+
+            <div class="accordion-content">test content</div>
+          </div>
+        </div>
+
+        <a
+          class="button ct-faq block"
+          target="_blank"
+          href="https://aide-groupe.ladepeche.fr/knowledge"
+          >Consulter la foire aux questions</a
+        >
+      </section>
+    </main>
+  </body>
+
+  <footer
+    class="footer-animate @container bloc-animate block px-0 md:px-6 md:px-6 mb-[104px] lg:mb-[136px] xl:px-[199px]"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center justify-between md:max-h-[30.5px] lg:max-h-[40px]"
+    >
+      <div
+        class="logo mb-10 md:mb-0 md:flex md:justify-between md:gap-5 items-center"
+      >
+        <img
+          class="text-center md:text-left mt-0 mx-auto mb-5 md:mb-0 md:max-h-[30.5px] lg:max-h-[40.5px]"
+          src="./assets/la-depeche-logo-footer.svg"
+          alt="La depêche"
+        />
+        <div class="mx-auto flex gap-[18px] justify-center items-center">
+          <img
+            class="text-center mt-0"
+            src="./assets/lock.svg"
+            alt="La depêche"
+          />
+          <span class="text-black text-xs lg:text-base font-inter font-semibold"
+            >Paiement sécurisé</span
+          >
+        </div>
+      </div>
+
+      <ul
+        class="footer-menu text-xs lg:text-base text-center font-inter font-medium text-[#878787] flex flex-col md:flex-row gap-7"
+      >
+        <li>
+          <a href="https://abonnement.ladepeche.fr/cgv.html" target="_blank"
+            >CGV</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://abonnement.ladepeche.fr/mentions-legales.html"
+            target="_blank"
+            >Mentions légales</a
+          >
+        </li>
+        <li>
+          <a href="https://aide-groupe.ladepeche.fr/knowledge" target="_blank"
+            >Aide et contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <div
+    id="premium-sticky"
+    class="fixed hidden bottom-0 w-full md:w-[422px] rounded-tl-[20px] rounded-tr-[20px] bg-radio px-4 py-2 text-black-1 flex justify-between items-center left-1/2 -translate-x-1/2 z-10"
+  >
+    <div class="text-sm font-inter">
+      <span class="font-bold">Premium</span><span> - </span
+      ><span class="font-semibold italic">2 comptes</span>
+      <p class="font-semibold text-xs">Mensuelle 11,99€/mois</p>
+    </div>
+
+    <a
+      class="button sticky-btn text-center w-1/2 max-w-[116px] bg-secondary hover:bg-hover-primary hover:text-white"
+      href="#"
+      >Continuer</a
+    >
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</html>
