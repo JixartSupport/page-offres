@@ -319,10 +319,16 @@ document.addEventListener("DOMContentLoaded", function() {
 // FLux rss
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const wrapper = document.querySelector(".swiper-wrapper");
+  const swiperContainer = document.querySelector(".mySwiperBlogs");
+  const wrapper = swiperContainer?.querySelector(".swiper-wrapper");
+
+  if (!swiperContainer || !wrapper) {
+    console.error("Le Swiper .mySwiperBlogs n’a pas été trouvé sur la page.");
+    return;
+  }
 
   try {
-    const response = await fetch("https://cors-anywhere.herokuapp.com/https://clubabonnes.ladepeche.fr/fr/rss.xml");
+    const response = await fetch("/rss-proxy.php"); // ou ton URL proxy côté serveur
     const text = await response.text();
     const parser = new DOMParser();
     const xml = parser.parseFromString(text, "application/xml");
@@ -334,13 +340,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       const description = item.querySelector("description")?.textContent || "";
       const category = item.querySelector("category")?.textContent || "Article";
 
-      // Optional: Extract image from <media:content> if available
+      // Optional: Extract image from <media:content> or first img in description
       const media = item.querySelector("media\\:content, content");
       let imageUrl = "./assets/placeholder.jpg"; // fallback
       if (media) {
         imageUrl = media.getAttribute("url");
       } else {
-        // try to extract first image from description html
         const tmpDiv = document.createElement("div");
         tmpDiv.innerHTML = description;
         const imgInDesc = tmpDiv.querySelector("img");
@@ -364,18 +369,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       wrapper.appendChild(slide);
     });
 
-    // Initialize Swiper after slides are added
-    new Swiper(".mySwiperBlogs", {
+    // Initialize Swiper only for this specific container
+    new Swiper(swiperContainer, {
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: swiperContainer.querySelector(".swiper-pagination"),
         clickable: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: swiperContainer.querySelector(".swiper-button-next"),
+        prevEl: swiperContainer.querySelector(".swiper-button-prev"),
       },
       breakpoints: {
         768: { slidesPerView: 2 },
